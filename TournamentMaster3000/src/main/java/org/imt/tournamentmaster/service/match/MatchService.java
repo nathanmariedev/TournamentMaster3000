@@ -153,4 +153,9 @@ public class MatchService {
 
         return Optional.empty();
     }
+
+    @Transactional(readOnly = false)
+    public void deleteById(long id){
+        matchRepository.deleteById(id);
+    }
 }

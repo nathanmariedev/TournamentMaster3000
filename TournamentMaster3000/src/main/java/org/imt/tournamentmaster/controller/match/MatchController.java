@@ -45,6 +45,8 @@ public class MatchController {
             @RequestParam(required = false) Status status
     ) {
         return matchService.searchMatch(equipeAId, equipeBId, equipeAName, equipeBName, playerName, status);
+    }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Match> updateMatch(@PathVariable long id, @RequestBody Match updatedMatch) {
@@ -58,5 +60,10 @@ public class MatchController {
     public ResponseEntity<Match> creerMatch(@RequestBody Match match) {
         Match nouveauMatch = matchService.creerMatch(match);
         return new ResponseEntity<>(nouveauMatch, HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable long id) {
+        matchService.deleteById(id);
     }
 }
