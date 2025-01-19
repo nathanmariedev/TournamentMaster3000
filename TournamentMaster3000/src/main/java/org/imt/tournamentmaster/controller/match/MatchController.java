@@ -32,4 +32,9 @@ public class MatchController {
     public List<Match> getAll() {
         return matchService.getAll();
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable long id) {
+        matchService.deleteById(id);
+    }
 }
