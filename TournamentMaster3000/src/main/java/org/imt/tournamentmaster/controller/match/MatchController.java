@@ -1,6 +1,7 @@
 package org.imt.tournamentmaster.controller.match;
 
 import org.imt.tournamentmaster.model.match.Match;
+import org.imt.tournamentmaster.model.match.Match.Status;
 import org.imt.tournamentmaster.service.match.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,5 +32,17 @@ public class MatchController {
     @GetMapping
     public List<Match> getAll() {
         return matchService.getAll();
+    }
+
+    @GetMapping("/search")
+    public List<Match> search(
+            @RequestParam(required = false) Long equipeAId,
+            @RequestParam(required = false) Long equipeBId,
+            @RequestParam(required = false) String equipeAName,
+            @RequestParam(required = false) String equipeBName,
+            @RequestParam(required = false) String playerName,
+            @RequestParam(required = false) Status status
+    ) {
+        return matchService.searchMatch(equipeAId, equipeBId, equipeAName, equipeBName, playerName, status);
     }
 }
