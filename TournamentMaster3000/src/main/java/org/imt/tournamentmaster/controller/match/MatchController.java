@@ -32,4 +32,12 @@ public class MatchController {
     public List<Match> getAll() {
         return matchService.getAll();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Match> updateMatch(@PathVariable long id, @RequestBody Match updatedMatch) {
+        Optional<Match> matchOptional = matchService.updateMatch(id, updatedMatch);
+        return matchOptional
+                .map(match -> ResponseEntity.ok().body(match))
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
 }
