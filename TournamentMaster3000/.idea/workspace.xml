@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d489c549-4ab5-43a3-91ec-b1db03e26a14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/controller/match/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/controller/match/MatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/equipe/Equipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/equipe/Equipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/equipe/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/equipe/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/match/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/match/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/match/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/match/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/resultat/Resultat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/model/resultat/Resultat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/service/match/MatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/imt/tournamentmaster/service/match/MatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/controller/match/MatchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/controller/match/MatchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/equipe/Equipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/equipe/Equipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/equipe/Joueur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/equipe/Joueur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/match/Match.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/match/Match.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/match/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/match/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/resultat/Resultat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/model/resultat/Resultat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/service/match/MatchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/imt/tournamentmaster/service/match/MatchService.class" afterDir="false" />
-    </list>
+    <list default="true" id="d489c549-4ab5-43a3-91ec-b1db03e26a14" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,27 +21,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TournamentmasterApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;UPDATE-MATCH&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Noé C/Documents/cours/IMT/conception/tp swing/TournamentMaster3000/TournamentMaster3000&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TournamentmasterApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Noé C/Documents/cours/IMT/conception/tp swing/TournamentMaster3000/TournamentMaster3000",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TournamentmasterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TournamentMaster3000" />
