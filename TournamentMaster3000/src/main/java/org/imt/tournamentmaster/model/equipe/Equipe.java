@@ -1,9 +1,12 @@
 package org.imt.tournamentmaster.model.equipe;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,9 +18,11 @@ public class Equipe {
     @Id
     private long id;
 
+    @NotNull
     private String nom;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @Size(min = 11)
     private List<Joueur> joueurs;
 
     public Equipe() {

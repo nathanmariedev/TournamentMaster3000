@@ -3,11 +3,9 @@ package org.imt.tournamentmaster.controller.resultat;
 import org.imt.tournamentmaster.model.resultat.Resultat;
 import org.imt.tournamentmaster.service.resultat.ResultatService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -34,5 +32,15 @@ public class ResultatController {
     @GetMapping
     public List<Resultat> getAll() {
         return resultatService.getAll();
+    }
+
+    @PostMapping("/news")
+    public ResponseEntity<String> importerResultats(@RequestBody List<Resultat> resultats) {
+        try {
+            String rapport = resultatService.creerResultats(resultats);
+            return ResponseEntity.ok(rapport);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erreur dans l'importation des résultats.");
+        }
     }
 }

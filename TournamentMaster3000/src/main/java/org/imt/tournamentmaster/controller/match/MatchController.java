@@ -4,6 +4,7 @@ import org.imt.tournamentmaster.model.match.Match;
 import org.imt.tournamentmaster.model.match.Match.Status;
 import org.imt.tournamentmaster.service.match.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,5 +52,11 @@ public class MatchController {
         return matchOptional
                 .map(match -> ResponseEntity.ok().body(match))
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/new")
+    public ResponseEntity<Match> creerMatch(@RequestBody Match match) {
+        Match nouveauMatch = matchService.creerMatch(match);
+        return new ResponseEntity<>(nouveauMatch, HttpStatus.CREATED);
     }
 }

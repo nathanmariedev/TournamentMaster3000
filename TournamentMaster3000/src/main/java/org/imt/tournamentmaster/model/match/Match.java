@@ -2,6 +2,8 @@ package org.imt.tournamentmaster.model.match;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.imt.tournamentmaster.model.equipe.Equipe;
 
 import java.util.List;
@@ -15,15 +17,19 @@ public class Match {
     @Id
     private long id;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipea_id")
     private Equipe equipeA;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipeb_id")
     private Equipe equipeB;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @Size(min =2, max = 5)
     private List<Round> rounds; // Set est un type de collection, on va éviter les confusions et appeler ça un "round"
 
+    @NotNull
     private Status status;
 
     public Match() {
@@ -96,6 +102,18 @@ public class Match {
         } else {
             return equipeB;
         }
+    }
+
+    public String getScoreTotal() {
+        int scoreEquipeA = 0;
+        int scoreEquipeB = 0;
+
+        for (Round round : rounds) {
+            scoreEquipeA += round.getScoreA();
+            scoreEquipeB += round.getScoreB();
+        }
+
+        return (scoreEquipeA + " - " + scoreEquipeB);
     }
 
     @Override

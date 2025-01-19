@@ -34,4 +34,9 @@ public class RoundService {
     public List<Round> getByScoreAGreaterThanEqual(int scoreA) {
         return roundRepository.findByScoreAGreaterThanEqual(scoreA);
     }
+
+    @Transactional
+    public Round creerRound(Round round) {
+        return roundRepository.save(round);
+    }
 }

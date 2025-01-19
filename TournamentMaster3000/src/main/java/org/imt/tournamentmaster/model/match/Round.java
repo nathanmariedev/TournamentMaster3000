@@ -1,9 +1,8 @@
 package org.imt.tournamentmaster.model.match;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import org.imt.tournamentmaster.model.equipe.Equipe;
 
 import java.util.Objects;
@@ -15,16 +14,24 @@ public class Round {
     @Id
     private long id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipea_id")
     private Equipe equipeA;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipeb_id")
     private Equipe equipeB;
 
+    @NotNull
+    @PositiveOrZero
     private int scoreA;
 
+    @NotNull
+    @PositiveOrZero
     private int scoreB;
 
+    @Min(1)
+    @Max(5)
     private int roundNumber;
 
     public Round() {
