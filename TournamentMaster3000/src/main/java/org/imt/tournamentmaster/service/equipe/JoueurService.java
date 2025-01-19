@@ -32,6 +32,11 @@ public class JoueurService {
     }
 
     @Transactional
+    public Joueur creerJoueur(Joueur joueur) {
+        return joueurRepository.save(joueur);
+    }
+
+    @Transactional
     public Optional<Joueur> save(Joueur joueur) {
         if (joueur == null) {
             throw new IllegalArgumentException("Le joueur ne peut pas être null");

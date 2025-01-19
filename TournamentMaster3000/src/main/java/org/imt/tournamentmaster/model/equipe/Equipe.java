@@ -1,6 +1,7 @@
 package org.imt.tournamentmaster.model.equipe;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -20,7 +21,7 @@ public class Equipe {
     @NotNull
     private String nom;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @Size(min = 11)
     private List<Joueur> joueurs;
 

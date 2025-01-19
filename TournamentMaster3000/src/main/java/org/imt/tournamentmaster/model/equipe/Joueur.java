@@ -3,6 +3,7 @@ package org.imt.tournamentmaster.model.equipe;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import jakarta.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
+@Table(name = "joueur")
 public class Joueur {
 
     @Id
