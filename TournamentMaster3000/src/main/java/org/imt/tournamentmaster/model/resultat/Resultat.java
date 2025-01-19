@@ -12,7 +12,7 @@ import java.util.Objects;
 @Entity
 public class Resultat {
 
-    @JsonIgnore
+    //@JsonIgnore
     @Id
     private long id;
 

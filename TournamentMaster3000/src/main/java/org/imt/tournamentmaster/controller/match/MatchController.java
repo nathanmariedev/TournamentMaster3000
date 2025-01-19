@@ -44,5 +44,12 @@ public class MatchController {
             @RequestParam(required = false) Status status
     ) {
         return matchService.searchMatch(equipeAId, equipeBId, equipeAName, equipeBName, playerName, status);
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Match> updateMatch(@PathVariable long id, @RequestBody Match updatedMatch) {
+        Optional<Match> matchOptional = matchService.updateMatch(id, updatedMatch);
+        return matchOptional
+                .map(match -> ResponseEntity.ok().body(match))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
