@@ -30,4 +30,20 @@ public class JoueurService {
         return StreamSupport.stream(joueurRepository.findAll().spliterator(), false)
                 .toList();
     }
+
+    @Transactional
+    public Optional<Joueur> save(Joueur joueur) {
+        if (joueur == null) {
+            throw new IllegalArgumentException("Le joueur ne peut pas être null");
+        }
+
+        // Vérifie si un joueur avec le même nom existe déjà
+        if (joueurRepository.findById(joueur.getId()).isPresent()) {
+            throw new IllegalStateException("Un joueur avec cet id existe déjà !");
+        }
+
+        // Si le joueur n'existe pas, on le sauvegarde
+        Joueur newJoueur = joueurRepository.save(joueur);
+        return Optional.of(newJoueur);
+    }
 }

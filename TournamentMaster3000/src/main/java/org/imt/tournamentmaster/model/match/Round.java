@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.*;
 import org.imt.tournamentmaster.model.equipe.Equipe;
 
 import java.util.Objects;
@@ -21,10 +22,16 @@ public class Round {
     @OneToOne
     private Equipe equipeB;
 
+    @NotNull
+    @PositiveOrZero
     private int scoreA;
 
+    @NotNull
+    @PositiveOrZero
     private int scoreB;
 
+    @Min(1)
+    @Max(5)
     private int roundNumber;
 
     public Round() {

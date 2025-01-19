@@ -3,20 +3,27 @@ package org.imt.tournamentmaster.model.equipe;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.Objects;
 
 @Entity
 public class Joueur {
 
-    @JsonIgnore
     @Id
     private long id;
 
+    @NotNull
     private String nom;
 
+    @NotNull
     private String prenom;
 
+    @NotNull
+    @Min(1)
+    @Max(99)
     private int numero;
 
     public Joueur() {
@@ -43,6 +50,10 @@ public class Joueur {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setNom(String nom) {
